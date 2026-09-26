@@ -1,0 +1,9 @@
+### Information about an available skill in the Python agent service.
+class: SkillInfo
+fields:
+  ### Unique skill identifier.
+  name: String
+  ### Human-readable description of the skill.
+  description: String
+  ### JSON-encoded schema of expected inputs.
+  inputSchema: String?

@@ -1,0 +1,15 @@
+### Response from an orchestration request.
+class: OrchestrationResponse
+fields:
+  ### The task ID assigned to this orchestration.
+  taskId: int?
+  ### Current status of the task.
+  status: String
+  ### The skill name that was selected.
+  skillName: String?
+  ### JSON-encoded result from the skill execution.
+  result: String?
+  ### Error message if something went wrong.
+  error: String?
+  ### How long the full orchestration took in milliseconds.
+  executionTimeMs: int?

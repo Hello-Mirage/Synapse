@@ -1,0 +1,24 @@
+### Represents a user prompt and its orchestration through the system.
+class: OrchestrationTask
+table: orchestration_tasks
+fields:
+  ### The user's original prompt/instruction.
+  prompt: String
+  ### Optional code context provided alongside the prompt.
+  codeContext: String?
+  ### Raw response from Gemini API.
+  geminiResponse: String?
+  ### Current status: pending, calling_gemini, parsing, dispatching, running, complete, failed.
+  status: String
+  ### Name of the skill selected for execution.
+  skillName: String?
+  ### JSON-encoded input data for the skill.
+  skillInput: String?
+  ### JSON-encoded output from the skill execution.
+  skillOutput: String?
+  ### Error message if the task failed.
+  errorMessage: String?
+  ### Timestamp when the task was created.
+  createdAt: DateTime
+  ### Timestamp when the task completed or failed.
+  completedAt: DateTime?
